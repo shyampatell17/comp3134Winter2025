@@ -1,0 +1,56 @@
+1. nmap --version
+Nmap version 7.80 ( https://nmap.org )
+Platform: x86_64-pc-linux-gnu
+Compiled with: liblua-5.3.6 openssl-3.0.2 nmap-libssh2-1.8.2 libz-1.2.11 libpcre-8.45 libpcap-1.10.1 nmap-libdnet-1.12 ipv6
+Compiled without:
+Available nsock engines: epoll poll select
+
+
+2. nmap comp3134-Winter2025
+root@comp3134-Winter2025:~# nmap comp3134-Winter2025
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-01-17 19:01 UTC
+Nmap scan report for comp3134-Winter2025 (127.0.1.1)
+Host is up (0.0000060s latency).
+Not shown: 997 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+25/tcp open  smtp
+80/tcp open  http
+
+
+3. nmap -p 22 comp3134-Winter2025
+root@comp3134-Winter2025:~# nmap -p 22 comp3134-Winter2025
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-01-17 19:02 UTC
+Nmap scan report for comp3134-Winter2025 (127.0.1.1)
+Host is up (0.000061s latency).
+
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+
+4. nmap -p 22-80 comp3134-Winter2025
+root@comp3134-Winter2025:~# nmap -p 22-80 comp3134-Winter2025
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-01-17 19:03 UTC
+Nmap scan report for comp3134-Winter2025 (127.0.1.1)
+Host is up (0.0000060s latency).
+Not shown: 56 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+25/tcp open  smtp
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 0.04 seconds
+
+
+5. nmap -F comp3134-Winter2025
+root@comp3134-Winter2025:~# nmap -F comp3134-Winter2025
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-01-17 19:04 UTC
+Nmap scan report for comp3134-Winter2025 (127.0.1.1)
+Host is up (0.0000090s latency).
+Not shown: 97 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+25/tcp open  smtp
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 0.06 seconds

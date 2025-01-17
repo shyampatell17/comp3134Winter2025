@@ -1,0 +1,6 @@
+Any Host Server Route Test
+
+root@comp3134-Winter2025:~# traceroute localhost
+traceroute to localhost (127.0.0.1), 30 hops max, 60 byte packets
+1 localhost (127.0.0.1)  0.025 ms  0.007 ms  0.006 ms
+

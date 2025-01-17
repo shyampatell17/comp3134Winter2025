@@ -1,0 +1,5 @@
+Any Host Server Route Test form our droplet
+
+root@comp3134-Winter2025:~# traceroute comp3134-Winter2025
+traceroute to comp3134-Winter2025 (127.0.1.1), 30 hops max, 60 byte packets
+ 1  comp3134-Winter2025 (127.0.1.1)  0.032 ms  0.006 ms  0.007 ms
