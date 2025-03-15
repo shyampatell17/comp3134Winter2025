@@ -1,0 +1,24 @@
+Scenario 1 - Valid Word:
+• Word Entered: apple
+• Observation:
+Upon typing a valid English word like “apple” in the search form and submitting it, the website returns the definition of the word “apple”. The page loads normally, and the result is displayed in a readable format without any errors or unusual behavior. There is no sign of script injections or malicious activity since the input is handled properly by the website.
+
+
+Scenario 2 - Invalid Word:
+• Word Entered: xyzxyzxyzxyz
+• Observation:
+When I typed an invalid word like “xyzxyzxyzxyz” after /browse/ in the URL (i.e., https://www.dictionary.com/browse/xyzxyzxyzxyz), the website displayed a “Sorry, no results found” message. It indicates that the word does not exist in the dictionary. The page rendered normally, and there were no security issues or errors. This suggests that the website is handling invalid input gracefully by showing an appropriate error message.
+
+
+Scenario 3 - XSS Attack in Form:
+• Text Entered: <script>alert('hello')</script>
+• Observation:
+When I typed the following text in the form: <script>alert('hello')</script>, the website processed the input and displayed it as plain text rather than executing it as JavaScript. No alert was triggered. This indicates that the website has some form of input sanitization in place, preventing potential cross-site scripting (XSS) attacks. The input was likely sanitized to remove harmful script tags or escape special characters, making it safe.
+
+
+Scenario 4 - XSS Attack in URL:
+• Text Entered in URL: <script>alert('hello')</script>
+• URL: https://www.dictionary.com/browse/cybersecurity?term=<script>alert('hello')</script>
+• Observation:
+When I entered the following text <script>alert('hello')</script> after term= in the URL (https://www.dictionary.com/browse/cybersecurity?term=<script>alert('hello')</script>), the website handled it safely and did not trigger any JavaScript alert. The input was displayed as plain text on the page, suggesting that the website employs input sanitization and validation mechanisms to prevent script execution from user inputs in URLs. This shows that the website is protected against XSS attacks from query strings.
+

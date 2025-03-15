@@ -1,0 +1,1 @@
+Issue Observed on Browser:--------------------------------The browser displays a list of directories within the web server’s root directory. The output reveals:- `.` (current directory)- `..` (parent directory)- `html` (a folder likely containing web application files)This suggests that directory listing is enabled and accessible through the URL.
